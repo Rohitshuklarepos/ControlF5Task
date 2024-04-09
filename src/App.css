@@ -1,38 +1,118 @@
-.App {
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: #000;
+
+}
+
+.sidebar {
+  width: 20%;
+  height: 100vh; /* 100% of the viewport height */
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1; /* Grow to fill remaining space */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar-menu li {
+  padding: 10px 20px;
+  margin-left: 80px;
+  text-align: left;
+  cursor: pointer;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar-menu li:hover {
+  background-color: #333;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.content{
+  flex:1;
+  background-color: #1F1F1F;
+  color: #fff;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 50px;
+
+  
+}
+
+.model-search-box{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: right;
+  gap: 20px;
+  padding-right: 30px;
+
+}
+.model-search-box img{
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+}
+.model-search-box input{
+  border-radius: 20px;
+  background-color: #1F1F1F;
+  border: none;
+  background-image: linear-gradient(to right, #363636, #222222);
+  width: 70%;
+}
+.model-search-box input:focus-visible{
+ border: none;
+ box-shadow: none;
 }
 
-.App-link {
-  color: #61dafb;
+.Model-Table{
+  background-image: linear-gradient(to right, #363636, #222222);
+  border-radius: 15px;
+  margin: 20px;
+  color: #fff;
+  height: 70vh;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table{
+  padding: 20px;
+  color: #fff !important;
+}
+
+.table-content{
+  padding: 40px;
+  color: #fff;
+}
+
+.model-table-heading-c1{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.model-table-heading-c1 p {
+  opacity: 0.5;
+}
+.model-table-heading-c2{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.model-table-heading-c2 p{
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.model-table-heading-c2 p:first-child {
+  background-image: linear-gradient(to right, #6154f4, #E75363);  
 }
